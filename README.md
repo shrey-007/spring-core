@@ -1,5 +1,5 @@
 local repo project name=spring_core_github
-As simple program to show how to inject dependencies in spring.
+A simple program to show how to inject dependencies in spring.
 
 How to create program=
 i)add spring dependencies in pom.xml
