@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean name="city" class="org.example.multipleClassDependencies.City">
+        <property name="name" value="Gwalior"/>
+        <property name="cid" value="7"/>
+    </bean>
+
+
+    <bean name="state"  class="org.example.multipleClassDependencies.State">
+        <property name="name" value="MadhyaPradesh"/>
+        <property name="sid" value="7"/>
+    </bean>
+
+
+    <bean name="student" class="org.example.multipleClassDependencies.Student">
+        <property name="name" value="shrey"/>
+        <property name="roll_num" value="230"/>
+        <property name="age" value="20"/>
+        <property name="city" ref="city"/>
+        <property name="state" ref="state"/>
+    </bean>
+
+
+</beans>
